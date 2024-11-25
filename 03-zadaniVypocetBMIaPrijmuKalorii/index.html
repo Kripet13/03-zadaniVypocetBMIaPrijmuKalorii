@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Výpočet BMI a příjmu kalorií</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <h1>Výpočet BMI a BMR</h1>
+    <fieldset>
+    <div>
+        <h2>Výpočet BMI a BMR</h2>
+        <label for="height">Výška:</label>
+        <input type="number" step="0.01" id="height" placeholder="Výška (m)"><br>
+        <br>
+        <label for="weight">Váha:</label>
+        <input type="number" id="weight" placeholder="Váha (Kg)"><br>
+        <br>
+    </div>
+
+    <div>
+        <label value="select">výběr pohlaví</label>
+        <select id="gender">
+            <option value="fm">žena</option>
+            <option value="ml">muž</option>
+        </select>
+        <label for="activityLevel">úroveň fyzické aktivity</label>
+        <select id="activityLevel">
+            <option value="low">nízká</option>
+            <option value="medium">střední</option>
+            <option value="high">výsoká</option>
+        </select><br>
+        <br>
+        <label for="age">Věk:</label>
+        <input type="number" id="age" placeholder="Zadejte věk v letech"><br>
+        <br>
+        <button onclick="calculateBMR()">Vypočítat BMR</button>
+        <button onclick="calculateBMI()">Vypočítat BMI</button>
+        <br>
+        <p id="bmiResult"></p>
+        <p id="bmrResult"></p>
+    </div>
+    </fieldset>
+    <div>
+        <button onclick="repeatCalculation()">Zopakovat výpočet</button>
+        <button onclick="endProgram()">Ukončit program</button>
+    </div>
+    </body>
+</html>
