@@ -18,6 +18,7 @@ function calculateBMI() {
         }
         document.getElementById('bmiResult').innerText = `Vaše BMI je ${bmi.toFixed(2)} (${result})`;
        console.log('ok');
+        document.getElementById("hideAway").removeAttribute("hidden");
         return true;
 }
 
@@ -50,6 +51,7 @@ function calculateBMR() {
     }
     document.getElementById('bmrResult').innerText = `Váš doporučený denní příjem kalorií je ${bmr.toFixed(2)} kcal`;
     console.log('ok');
+    document.getElementById("hideAway").removeAttribute("hidden");
     return true;
 }
 
